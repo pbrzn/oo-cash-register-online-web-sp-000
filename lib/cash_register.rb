@@ -6,11 +6,10 @@ class CashRegister
   def initialize(discount=0)
     @total=0
     @discount=discount
+    @items=[]
   end
   
   def add_item(item, cost, amount=1)
-    binding.pry
-    @items=[]
     amount.times do
       @items << item
     end
