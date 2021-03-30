@@ -13,7 +13,7 @@ class CashRegister
     @cost=cost
     @amount=amount
     self.amount.times do
-      @@items << self.item
+      @items << self.item
     end
     @item_total_cost=cost*amount
     self.total+=@item_total_cost
@@ -31,10 +31,7 @@ class CashRegister
   end
   
   def items
-    self.amount.times do
-      @@items << self.item
-    end
-    @@items
+    @items
   end
   
   def void_last_transaction
