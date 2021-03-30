@@ -12,8 +12,8 @@ class CashRegister
     amount.times do
       @items << item
     end
-    item_total_cost=cost*amount
-    self.total+=item_total_cost
+    @item_total_cost=cost*amount
+    self.total+=@item_total_cost
   end
   
   def apply_discount
