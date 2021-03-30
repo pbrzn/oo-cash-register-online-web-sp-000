@@ -9,11 +9,11 @@ class CashRegister
   
   def add_item(item, cost, amount=1)
     @item=item
-    @items=[]
+    @itesm=[]
     @cost=cost
     @amount=amount
     self.amount.times do
-      @items << item
+      @items << self.item
     end
     @item_total_cost=cost*amount
     self.total+=@item_total_cost
@@ -31,7 +31,10 @@ class CashRegister
   end
   
   def items
-    @items
+    self.amount.times do
+      @@items << self.item
+    end
+    @@items
   end
   
   def void_last_transaction
