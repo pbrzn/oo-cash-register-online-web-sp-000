@@ -9,14 +9,11 @@ class CashRegister
   end
   
   def add_item(item, cost, amount=1)
-    @item=item
-    @cost=cost
-    @amount=amount
-    self.amount.times do
-      @items << self.item
+    amount.times do
+      @items << item
     end
-    @item_total_cost=cost*amount
-    self.total+=@item_total_cost
+    item_total_cost=cost*amount
+    self.total+=item_total_cost
   end
   
   def apply_discount
