@@ -9,7 +9,7 @@ class CashRegister
   
   def add_item(item, cost, amount=1)
     @item=item
-    @itesm=[]
+    @items=[]
     @cost=cost
     @amount=amount
     self.amount.times do
