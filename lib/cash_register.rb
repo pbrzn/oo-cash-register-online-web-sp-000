@@ -13,7 +13,7 @@ class CashRegister
     @cost=cost
     @amount=amount
     self.amount.times do
-      @items << self.item
+      @items << item
     end
     @item_total_cost=cost*amount
     self.total+=@item_total_cost
