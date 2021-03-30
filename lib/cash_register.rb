@@ -1,14 +1,16 @@
+require 'pry'
+
 class CashRegister
   attr_accessor :total, :discount, :item, :amount, :cost, :last_item
-  #@@items = []
   
   def initialize(discount=0)
     @total=0
     @discount=discount
-    @items=[]
   end
   
   def add_item(item, cost, amount=1)
+    binding.pry
+    @items=[]
     amount.times do
       @items << item
     end
